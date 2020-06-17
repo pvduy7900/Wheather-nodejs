@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+ <form action="/" method="GET">
+    <input name="city" placeholder="Enter a city name" required>
+    <input type="submit" value="Get Forecast">
+  </form>
+{{#if forecast}}
+<ul>
+    <li>temperature:{{forecast.temp}}</li>
+    <li>Descriptiom:{{forecast.weather.0.description}}</li>
+    <li>time:{{time}}</li>
+</ul>
+
+
+{{/if}}
+
+{{!-- UI --}}
